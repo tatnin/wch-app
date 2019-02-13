@@ -1,0 +1,12 @@
+{
+	"id": "hero-video-layout",
+	"rev": "5-0e895329681f8ddf9423a8b2b3fcbf72",
+	"name": "Hero video",
+	"classification": "layout",
+	"prerender": false,
+	"thumbnail": {
+		"path": "/layouts/thumbnails/hero-video_220.svg"
+	},
+	"template": "hero-video-layout",
+	"templateType": "angular"
+}

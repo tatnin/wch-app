@@ -10,6 +10,7 @@
 		"@angular/platform-browser": "^6.1.0",
 		"@angular/platform-browser-dynamic": "^6.1.0",
 		"@angular/router": "^6.1.0",
+		"@ibm-wch-sdk/ci-build": "^7.2.291",
 		"@ibm-wch-sdk/ng": "6.0.498",
 		"@ibm-wch-sdk/ng-api": "6.0.498",
 		"@ibm-wch-sdk/ng-edit": "6.0.498",
@@ -67,6 +68,22 @@
 		"wchtools-cli": "^3"
 	},
 	"license": "MIT",
+	"lint-staged": {
+		"*.{js,jsx}": [
+			"prettier --write",
+			"eslint --fix",
+			"git add"
+		],
+		"*.{json,css,md}": [
+			"prettier --write",
+			"git add"
+		],
+		"*.{ts}": [
+			"prettier --write",
+			"tslint --fix",
+			"git add"
+		]
+	},
 	"private": true,
 	"scripts": {
 		"addPrefetch": "ibm-wch-sdk-cli add prefetch --script --data ./temp_data/ --src ./src/ ",
@@ -75,11 +92,13 @@
 		"build-deploy-code": "npm run build && npm run deploy-code",
 		"build-preload": " mkdir -p -m 777 temp_data && echo Pulling the site pages. Enter the user password for your WCH tenant: && wchtools pull -A --dir temp_data && npm run addPrefetch && rm -r temp_data &&  npm run build ",
 		"build-preload-windows": " mkdir temp_data && echo Pulling the site pages. Enter the user password for your WCH tenant: && wchtools pull -A --dir temp_data && npm run addPrefetch && rmdir /S /Q temp_data &&  npm run build ",
+		"build:ci": "npm run build",
 		"crawling": "node scripts/transpileForCrawling.js",
 		"create-layout": "echo Pulling the content types. Enter the user password for your WCH tenant: && wchtools pull -tlm -I --dir src/wchLayouts && echo Creating the layout, layout mapping, and the angular component. && ibm-wch-sdk-cli create layout --data src/wchLayouts --src src/app --scss --flat --editable",
 		"createSite": "ibm-wch-sdk-cli create site --name testpage --data ./dist/ ",
 		"deploy": "wchtools push -A -f -v --publish-now --dir dist",
 		"deploy-code": "wchtools push -w -f -v -I --publish-now --dir dist",
+		"deploy:ci": "npm run deploy -- --url ${ibm_wch_sdk_cli_url} --user ${ibm_wch_sdk_cli_username} --password ${ibm_wch_sdk_cli_password}",
 		"e2e": "protractor ./protractor.conf.js",
 		"install-layouts-from-folder": "node scripts/layoutsFromFolder.js ",
 		"install-layouts-from-git": "node scripts/layoutFromGit.js",
@@ -96,21 +115,5 @@
 		"test": "ng test --watch=false",
 		"update-app-module": "echo Pulling the content types. Enter the user password for your WCH tenant: && wchtools pull -tlm -I --dir src/wchLayouts && echo Updating the layout settings for new components. && ibm-wch-sdk-cli register layoutcomponents --src src/app --verbose"
 	},
-	"version": "0.0.0",
-	"lint-staged": {
-		"*.{js,jsx}": [
-			"prettier --write",
-			"eslint --fix",
-			"git add"
-		],
-		"*.{ts}": [
-			"prettier --write",
-			"tslint --fix",
-			"git add"
-		],
-		"*.{json,css,md}": [
-			"prettier --write",
-			"git add"
-		]
-	}
+	"version": "0.0.0"
 }

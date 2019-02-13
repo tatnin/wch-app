@@ -1,0 +1,21 @@
+{
+	"id": "error-page-layout-mapping",
+	"rev": "5-57ec2ffe9e09e355e7e03a248237ac66",
+	"name": "errorPageLayoutMapping",
+	"classification": "layout-mapping",
+	"type": {
+		"id": "16f3938f-90a7-44e9-baf0-751d861a6164"
+	},
+	"mappings": [
+		{
+			"defaultLayout": {
+				"id": "error-page-layout"
+			},
+			"layouts": [
+				{
+					"id": "error-page-layout"
+				}
+			]
+		}
+	]
+}

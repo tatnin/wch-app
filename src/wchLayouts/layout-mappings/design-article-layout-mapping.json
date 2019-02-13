@@ -1,0 +1,21 @@
+{
+	"id": "design-article-layout-mapping",
+	"rev": "5-3603fc031f1bc98fadc4e944515e894b",
+	"name": "designArticleLayoutMapping",
+	"classification": "layout-mapping",
+	"type": {
+		"id": "a8fa51a3-4919-4308-a0b3-6cd31ae15d7e"
+	},
+	"mappings": [
+		{
+			"defaultLayout": {
+				"id": "design-article-layout"
+			},
+			"layouts": [
+				{
+					"id": "design-article-layout"
+				}
+			]
+		}
+	]
+}
