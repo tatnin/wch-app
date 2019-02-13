@@ -23,7 +23,7 @@ utils.clearBuildDate();
 
 /*Write build date into buildDate.json*/
 const dateObj = {
-  "name": "Oslo",
+  "name": "RFU",
   "buildDate": new Date().toString()
 };
 fs.writeFile("dist/assets/buildDate.json", JSON.stringify(dateObj, null, " "), function(error) {

@@ -26,7 +26,7 @@ import { Observable } from 'rxjs';
 /**
  * @name Event
  * @id 10ed9f3f-ab41-45a9-ba24-d988974affa7
- * @description Content created from this template is included on the events page in the Oslo site.
+ * @description Content created from this template is included on the events page in the rfu site.
  */
 export abstract class AbstractEventComponent extends AbstractRenderingComponent {
 	/**

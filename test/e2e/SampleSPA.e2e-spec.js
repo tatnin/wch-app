@@ -107,7 +107,7 @@ describe('Sample OOB SPA tests', function () {
 		);
 	});
 
-	it('should be able to use the Search in Oslo to show Design Page', function () {
+	it('should be able to use the Search in RFU to show Design Page', function () {
 		//GIVEN we are in home page
 		let searchTerm = 'maximizing';
 

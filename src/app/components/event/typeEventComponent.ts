@@ -20,7 +20,7 @@ import { AbstractEventComponent } from './abstractEventComponent';
 /**
  * @name Event
  * @id 10ed9f3f-ab41-45a9-ba24-d988974affa7
- * @description Content created from this template is included on the events page in the Oslo site.
+ * @description Content created from this template is included on the events page in the rfu site.
  */
 /* TODO uncomment this if you plan to use the component standalone, i.e. not as the basis of a layout.
 @Component({

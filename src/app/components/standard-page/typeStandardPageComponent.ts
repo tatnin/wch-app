@@ -20,7 +20,7 @@ import { AbstractStandardPageComponent } from './abstractStandardPageComponent';
 /**
  * @name Standard page
  * @id 2af1d22a-fecf-41e1-a808-7301cb37b79f
- * @description Standard page has a one column layout which includes multiple sections for greater flexibility.  In the Oslo site, it's used for the Home, Events, and About us pages.
+ * @description Standard page has a one column layout which includes multiple sections for greater flexibility.  In the rfu site, it's used for the Home, Events, and About us pages.
  */
 /* TODO uncomment this if you plan to use the component standalone, i.e. not as the basis of a layout.
 @Component({

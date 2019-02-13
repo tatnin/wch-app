@@ -14,9 +14,9 @@
  * limitations under the License.
  *******************************************************************************/
 export class Constants {
-  // static readonly DOMAIN_NAME = 'your-domain-name.com';
-  // static readonly CONTENT_HUB_ID = '0000000-0000-0000-0000-000000000000';
-  // static readonly SITE_ID = '00000000-0000-0000-0000-000000000000';
+  static readonly DOMAIN_NAME = 'my1.digitalexperience.ibm.com';
+  static readonly CONTENT_HUB_ID = '7863e6d7-8709-4916-9888-68b132571c06';
+  static readonly SITE_ID = 'b2203775-d68e-4932-8cce-cf0419a99479';
 
 	static readonly PROTOCOL = 'https:';
 	static readonly urlSuffix = Constants['SITE_ID']

@@ -15,7 +15,7 @@
         <a class="button" [routerLink]="context.elements.goHomeButton.linkURL">{{context.elements.goHomeButton.linkText}}</a>
       </div>
     </div>
-    <!--Displaying error messages when in Oslo site skeleton template, which contains no contents and pages-->
+    <!--Displaying error messages when in rfu site skeleton template, which contains no contents and pages-->
     <div *ngIf="rc?.context?.site.pages && rc?.context?.site.pages.length === 0">
       <p>Oops! No pages have been created yet. Please log into IBM Watson Content Hub to create your page in Site Manager.</p>
       <p>Note: By default, a page with the url <b>/home</b> is selected so ensure you create one.</p>
