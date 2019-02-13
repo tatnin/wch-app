@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<script type='text/javascript'>
+		const dxSites = 'dxsites';
+		const siteIdRegexStr = '[\\w\\d_\\-%]';
+		const tenantIdRegexStr = `[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}`;
+		const baseUrlRegex = new RegExp(`^(?:\\/api)?(?:\\/(${tenantIdRegexStr}))?(?:(?:\\/${dxSites}\\/)(${siteIdRegexStr}+))?(?:\\/)?(?:.*)$`);
+		const [total, tenantId, siteId] = baseUrlRegex.exec(document.location.pathname);
+		const resourceUrl = tenantId ? `/${tenantId}/` : '/';
+
+		console.log(`index.html: resource url is "${resourceUrl}"` + (tenantId ? `, tenant id is "${tenantId}"` : '') + (siteId ? `, site id is "${siteId}"` : ''));
+		document.write(`<base href="${resourceUrl}">`);
+	</script>
+
+	<meta charset="utf-8">
+	<title>Oslo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body>
+<app></app>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+	WebFont.load({
+		google: {
+			families: ['Vidaloka', 'Roboto']
+		}
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<!--<app-tool-bar></app-tool-bar>-->
+<responsive-header *ngIf="!soloMode" [renderingContext]='onRenderingContext|async'></responsive-header>
+<div class="content-placeholder">
+  <router-outlet (activate)='onActivate($event)'></router-outlet>
+</div>
+<wch-footer *ngIf="!soloMode" [hidden]="lazyLoadFooter" [renderingContext]='onRenderingContext|async'></wch-footer>

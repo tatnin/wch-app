@@ -1,0 +1,17 @@
+<div class="summary-card">
+	<div class="summary-card-image">
+		<!-- This sample shows the entire supplied image, so the correct aspect should be supplied by the user. -->
+		<div class="article-lead-image">
+			<div class="image-container">
+				<wch-placeholder wchEditable="mainImage.leadImage">
+					<img *ngIf="rContext && mainImage && mainImage.leadImage.url" wchEditable="mainImage.leadImage"
+					 [src]="utils.getImageUrl(rContext, 'leadImage', 'card', 'mainImage')" [alt]="mainImage.leadImage.altText"
+					 [title]="mainImage.leadImage.altText">
+					<wch-placeholder-icon class="wch-placeholder" type="image" width="320" height="180" wchEditable="mainImage.leadImage">
+					</wch-placeholder-icon>
+				</wch-placeholder>
+			</div>
+		</div>
+	</div>
+	<p wchEditable="heading" wchFormat></p>
+</div>
