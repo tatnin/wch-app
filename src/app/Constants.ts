@@ -30,7 +30,7 @@ export class Constants {
 	}/${Constants['CONTENT_HUB_ID']}${Constants['urlSuffix']}`;
 
 	static readonly FOOTER_CONFIG = 'footerConfig';
-	static readonly HEADER_CONFIG = 'headerConfig';
+	static readonly HEADER_CONFIG = 'rfuHeader';
 
 	/*Layout modes */
 	static readonly DETAIL = 'default';

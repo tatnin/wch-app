@@ -1,7 +1,4 @@
-import {
-    RenderingContext
-} from '@ibm-wch-sdk/ng';
-import { Component } from '@angular/core';
+
 import { AbstractAllTypesPageComponent } from './abstractAllTypesPageComponent';
 
 /** Useful imports */
