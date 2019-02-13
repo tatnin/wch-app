@@ -10,7 +10,7 @@
 		"@angular/platform-browser": "^6.1.0",
 		"@angular/platform-browser-dynamic": "^6.1.0",
 		"@angular/router": "^6.1.0",
-		"@ibm-wch-sdk/ci-build": "^7.2.291",
+		"@ibm-wch-sdk/ci-build": "6.0.498",
 		"@ibm-wch-sdk/ng": "6.0.498",
 		"@ibm-wch-sdk/ng-api": "6.0.498",
 		"@ibm-wch-sdk/ng-edit": "6.0.498",
